@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VERI*FACTU | AEAT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto Mono', monospace;
+      background: linear-gradient(to right, #eef2f3, #dff1f1);
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(to right, #003366, #005f99);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .typewriter h1 {
+      overflow: hidden;
+      border-right: .15em solid white;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .10em;
+      animation:
+        typing 3s steps(30, end),
+        blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white }
+    }
+
+    section {
+      padding: 2rem 10%;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2 i {
+      color: #007acc;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background-color: #e0f7ff;
+      padding: 1rem;
+      border-radius: 12px;
+      border-left: 5px solid #007acc;
+      transition: background-color 0.3s;
+    }
+
+    .timeline-item:hover {
+      background-color: #d0f0ff;
+    }
+
+    .timeline-item i {
+      font-size: 2rem;
+      color: #007acc;
+      min-width: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #003366;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="typewriter">
+      <h1>VERI*FACTU - Sistema de Facturación AEAT</h1>
+    </div>
+  </header>
+
+  <section class="card">
+    <h2><i class="fas fa-question-circle"></i> ¿Qué es VERI*FACTU?</h2>
+    <p>Es un sistema de la Agencia Tributaria Española (AEAT) para verificar facturas y garantizar su trazabilidad mediante huella HASH y códigos QR. Es útil en procesos de inspección cuando se detectan irregularidades como facturas falsas o no justificadas.</p>
+  </section>
+
+  <section class="card">
+    <h2><i class="fas fa-cogs"></i> Funcionamiento</h2>
+    <ul>
+      <li>Generación de HASH en cada venta para asegurar trazabilidad.</li>
+      <li>Envío automático a AEAT al cerrar cada venta con respuesta y QR.</li>
+      <li>En caso de no tener conexión, se enviará automáticamente tras recuperarla.</li>
+      <li>Se pueden anular o rectificar facturas desde el terminal comunicándolo a la AEAT.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><i class="fas fa-scale-balanced"></i> Legislación Aplicable</h2>
+    <ul>
+      <li><strong>Ley 58/2003:</strong> Obligación de conservar documentos y permitir inspecciones.</li>
+      <li><strong>Real Decreto 1619/2012:</strong> Normas de facturación y conservación electrónica.</li>
+      <li><strong>Ley 11/2021:</strong> Lucha contra el fraude fiscal y obligación de verificación.</li>
+      <li><strong>Reglamento UE 2021/515:</strong> Facturación electrónica e interoperabilidad en la UE.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><i class="fas fa-calendar-alt"></i> Fechas Clave</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <i class="fas fa-code"></i>
+        <div><strong>29 de julio de 2025:</strong> Fecha límite para que desarrolladores adapten sus sistemas.</div>
+      </div>
+      <div class="timeline-item">
+        <i class="fas fa-building"></i>
+        <div><strong>1 de enero de 2026:</strong> Empresas deben usar software certificado.</div>
+      </div>
+      <div class="timeline-item">
+        <i class="fas fa-user"></i>
+        <div><strong>1 de julio de 2026:</strong> Autónomos y empresarios deben usar software compatible.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><i class="fas fa-shield-alt"></i> Recomendaciones y Consecuencias</h2>
+    <ul>
+      <li>Conservar facturas electrónicas con garantías de autenticidad.</li>
+      <li>Utilizar sistemas de facturación reconocidos como Facturae.</li>
+      <li>Verificar a los proveedores para evitar facturas falsas.</li>
+      <li><strong>Consecuencias:</strong> La AEAT puede sancionar si no se justifica la legitimidad de las facturas.</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 VERI*FACTU | Agencia Tributaria Española
+  </footer>
+</body>
+</html>
